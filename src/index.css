@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-drpepper-red: #711F25;
+  --color-drpepper-dark: #1A1A1A;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-drpepper-dark font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-drpepper-red text-white px-6 py-3 rounded-full font-bold hover:brightness-110 transition-all;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}
